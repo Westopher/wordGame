@@ -29,12 +29,24 @@ class ViewController: UITableViewController {
                 allWords = ["words did not load"]
         }
         
+        startGame()
+        
+    }
+        
         func startGame() {
             title = allWords.randomElement()
             usedWords.removeAll(keepingCapacity: true)
             tableView.reloadData()
         }
         
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return usedWords.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "word", for: indexPath)
+        cell.textLabel?.text = usedWords[indexPath.row]
+        return cell
     }
 
 
