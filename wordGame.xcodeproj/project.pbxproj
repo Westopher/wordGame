@@ -12,6 +12,7 @@
 		3DAA592F22CA13550055A336 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAA592D22CA13550055A336 /* Main.storyboard */; };
 		3DAA593122CA13560055A336 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DAA593022CA13560055A336 /* Assets.xcassets */; };
 		3DAA593422CA13560055A336 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAA593222CA13560055A336 /* LaunchScreen.storyboard */; };
+		3DAA593C22CA1A1C0055A336 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3DAA593B22CA1A1C0055A336 /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		3DAA593022CA13560055A336 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DAA593322CA13560055A336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DAA593522CA13560055A336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DAA593B22CA1A1C0055A336 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = start.txt; path = "../../HackingWithSwift-master/project5-files/start.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				3DAA593022CA13560055A336 /* Assets.xcassets */,
 				3DAA593222CA13560055A336 /* LaunchScreen.storyboard */,
 				3DAA593522CA13560055A336 /* Info.plist */,
+				3DAA593B22CA1A1C0055A336 /* start.txt */,
 			);
 			path = wordGame;
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DAA593422CA13560055A336 /* LaunchScreen.storyboard in Resources */,
+				3DAA593C22CA1A1C0055A336 /* start.txt in Resources */,
 				3DAA593122CA13560055A336 /* Assets.xcassets in Resources */,
 				3DAA592F22CA13550055A336 /* Main.storyboard in Resources */,
 			);

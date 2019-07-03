@@ -10,9 +10,31 @@ import UIKit
 
 class ViewController: UITableViewController {
 
+    var allWords = [String]()
+    var usedWords = [String]()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        //get the strings from the file and assign them to a variable (that variable is an array)
+        if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
+            if let startWords = try? String(contentsOf: startWordsURL) {
+                allWords = startWords.components(separatedBy: "\n")
+            }
+        }
+        
+        if allWords.isEmpty {
+                allWords = ["words did not load"]
+        }
+        
+        func startGame() {
+            title = allWords.randomElement()
+            usedWords.removeAll(keepingCapacity: true)
+            tableView.reloadData()
+        }
+        
     }
 
 
