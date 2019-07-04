@@ -16,6 +16,7 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //😎
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptForAnswer))
         
         //get the strings from the file and assign them to a variable (that variable is an array)
@@ -49,18 +50,28 @@ class ViewController: UITableViewController {
         return cell
     }
     
+    //😎
     @objc func promptForAnswer() {
         let ac = UIAlertController(title: "Enter Answer", message: nil, preferredStyle: .alert)
         ac.addTextField()
     
+    // this is what happens when user types in info and presses submit
     let submitAction = UIAlertAction(title: "Submit", style: .default) {
         [weak self, weak ac] action in
         guard let answer = ac?.textFields?[0].text else {return}
         self?.submit(answer)
     }
     
+    //add the submit button for the alert controller
     ac.addAction(submitAction)
+
+    //and finally, present this badboy for use
     present(ac, animated: true)
-}
+    }
+    
+    func submit(_ answer: String) {
+        
+    }
+    
 }
 
