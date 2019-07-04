@@ -71,6 +71,7 @@ class ViewController: UITableViewController {
     
     func submit(_ answer: String) {
         let lowerAnswer = answer.lowercased()
+        
         if isPossible(word: lowerAnswer), isOriginal(word: lowerAnswer), isReal(word: lowerAnswer) {
             usedWords.insert(answer, at: 0)
             
@@ -78,13 +79,21 @@ class ViewController: UITableViewController {
             tableView.insertRows(at: [indexPath], with: .right)
         }
     }
+}
     
     func isPossible(word: String) -> Bool {
+        guard var tempWord = title?.lowercased() else {return false}
+        
+        for letter in word {
+            if let position = tempWord.firstIndex(of: letter)
+        } else {
+            return false
+        }
         return true
     }
     
     func isOriginal(word: String) -> Bool {
-        return true
+        return !usedWords.contains(word)
     }
     
     func isReal(word: String) -> Bool {
