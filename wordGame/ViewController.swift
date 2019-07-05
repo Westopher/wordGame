@@ -79,22 +79,24 @@ class ViewController: UITableViewController {
             if isOriginal(word: lowerAnswer) {
                 if isReal(word: lowerAnswer) {
                     usedWords.insert(answer, at: 0)
-                    
+            
                     let indexPath = IndexPath(row: 0, section: 0)
                     tableView.insertRows(at: [indexPath], with: .right)
+                    
                     return
                 } else {
-                    errorTitle = "Word Nnt recognized"
-                    errorMessage = "This word does not register as English"
+                    errorTitle = "\(answer) not recognized"
+                    errorMessage = "\(answer) does not register as English"
                     }
             } else {
-                errorTitle = "Word Already Used"
+                errorTitle = "\(answer) already used"
                 errorMessage = "Try another word"
                 }
         } else {
-            errorTitle = "Word possible"
-            errorMessage = "Word can't be spelled from \(title!.lowercased())."
+            errorTitle = "You can not get \(answer) from \(title)"
+            errorMessage = "\(answer) can't be spelled from \(title!.lowercased())."
             }
+        
         let ac = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Ok", style: .default))
         present(ac, animated: true)
